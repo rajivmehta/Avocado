@@ -17,7 +17,7 @@ var avocado = angular.module('avocado', [
     }).state('home.viewer', {
         url: '/viewer',
         parent: 'home',
-        templateUrl: 'app/main/partials/avocado.home.designer.tpl.html'
+        templateUrl: 'app/main/partials/avocado.home.viewer.tpl.html'
     });
     $urlRouterProvider.otherwise('/', '/avocado/designer')
 }])

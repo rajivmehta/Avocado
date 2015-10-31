@@ -1,4 +1,14 @@
 ﻿<md-content>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <span flex="5"></span>
+            <md-input-container>
+                <label class="whiteColor">Fields</label>
+                <input class="whiteColor" ng-model="searchField">
+            </md-input-container>
+            <span flex></span>
+        </div>
+    </md-toolbar>
     <md-tabs md-dynamic-height md-border-bottom>
         <md-tab label="Designer" md-on-select="onSelectDesigner()">
             <md-content class="md-padding" ui-view>
