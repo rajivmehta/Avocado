@@ -1,0 +1,11 @@
+{
+  "name": "avocado",
+  "version": "0.0.1",
+  "description": "This is sample Avocado\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dclient-driven Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

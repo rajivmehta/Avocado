@@ -1,0 +1,23 @@
+{
+  "name": "avocado",
+  "description": "This is sample Avocado\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dclient-driven Application",
+  "main": "index.js",
+  "authors": [
+    "rajiv.mehta@gatewaytechnolabs.com"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-material": "~0.11.4",
+    "angular-ui-router": "~0.2.15"
+  }
+}
