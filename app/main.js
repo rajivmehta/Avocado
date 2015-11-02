@@ -13,11 +13,13 @@ var avocado = angular.module('avocado', [
     }).state('home.designer', {
             url: '/designer',
             parent: 'home',
-            templateUrl: 'app/main/partials/avocado.home.designer.tpl.html'
+            templateUrl: 'app/main/partials/avocado.home.designer.tpl.html',
+            controller: 'avocadoHomeDesignerController'
     }).state('home.viewer', {
         url: '/viewer',
         parent: 'home',
-        templateUrl: 'app/main/partials/avocado.home.viewer.tpl.html'
+        templateUrl: 'app/main/partials/avocado.home.viewer.tpl.html',
+        controller: 'avocadoHomeViewerController'
     });
-    $urlRouterProvider.otherwise('/', '/avocado/designer')
+    //$urlRouterProvider.otherwise('/', '/avocado/designer')
 }])

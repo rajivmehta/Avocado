@@ -1,3 +1,26 @@
 ﻿<span>
-    <h1>Designer</h1>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <span flex="5"></span>
+            <md-input-container>
+                <label class="whiteColor">Fields</label>
+                <input class="whiteColor" ng-model="searchField">
+            </md-input-container>
+            <span flex></span>
+        </div>
+    </md-toolbar>
+
+    <md-content>
+        <md-list>
+            <md-subheader class="md-no-sticky">Field Lists</md-subheader>
+            <md-list-item class="md-3-line" ng-repeat="item in configJson">
+                <div class="md-list-item-text" layout="column">
+                    <span style="display:inline-block">
+                        <md-checkbox ng-model="item.isSelected" aria-label="Checkbox 1"></md-checkbox>
+                    </span>
+                    <span>{{ item.fieldName }}</span>
+                </div>
+            </md-list-item>
+        </md-list>
+    </md-content>
 </span>
