@@ -44,5 +44,6 @@ angular.module('avocado.home.controller', ['avocado.home.service', 'avocado.view
                     self[item.model] = item[item.model];
                 }
             });
+            utility.dynamicScopRerence = self;
         })();
     }]);

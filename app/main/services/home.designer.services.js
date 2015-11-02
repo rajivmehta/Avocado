@@ -3,7 +3,7 @@ angular.module('avocado.home.service', [])
     .factory('utility', function ($window) {
         return {
             configjsondata: [],
-
+            dynamicScopRerence:{},
             setRequiredAttribute: function (item) {
                 return item.validation.required == "true" ? 'required' : ''
             },
@@ -26,14 +26,12 @@ angular.module('avocado.home.service', [])
                 var itemFrom = '';
                 var utility = this;
                 angular.forEach(config, function (item) {
-                    console.log(item);
                     switch (item.type) {
                         case 1:
-                            //itemFrom += '<span><input type="text" ng-model="' + item.model + '"  ' + utility.setRequiredAttribute(item) + '  ' + utility.setMaxLengthAttribute(item) + ' /></span>';
                             itemFrom += '<span><md-input-container><label>' + item.fieldName + '</label><input type="text" ng-model="' + item.model + '"  ' + utility.setRequiredAttribute(item) + '  ' + utility.setMaxLengthAttribute(item) + ' /></md-input-container></span>';
                             break;
                         case 2:
-                            itemFrom += '<span><input type="datetime-local" ng-model="' + item.model + '"  ' + utility.setRequiredAttribute(item) + ' /></span>';
+                            itemFrom += '<span><md-datepicker class="app-background-color" ng-model="' + item.model + '" md-placeholder="Enter date"></md-datepicker></span>';
                             break;
                         case 3:
                             var dropdownstring = '<span><select name="repeatSelect" ng-model="selectedCity">';
@@ -43,8 +41,10 @@ angular.module('avocado.home.service', [])
                             itemFrom += dropdownstring;
                             break;
                         case 4:
-                            //itemFrom += '<span><input type="number" ng-model="' + item.model + '"  ' + utility.setRequiredAttribute(item) + '  ' + utility.setMinAttribute(item) + '  ' + utility.setMaxAttribute(item) + '/></span>';
-                            itemFrom += '<span><md-input-container><label>' + item.fieldName + '</label><input type="number" ng-model="' + item.model + '"  ' + utility.setRequiredAttribute(item) + ' /></md-input-container></span>';
+                            itemFrom += '<span><md-input-container><label>' + item.fieldName + '</label><input type="number" ng-model="' + item.model + '"  ' + utility.setRequiredAttribute(item) + ' ' + utility.setMinAttribute(item) + '  ' + utility.setMaxAttribute(item) + ' /></md-input-container></span>';
+                            break;
+                        case 5:
+                            itemFrom += '<span><md-input-container><label>' + item.fieldName + '</label><input type="email" ng-model="' + item.model + '"  ' + utility.setRequiredAttribute(item) + '  ' + utility.setMaxLengthAttribute(item) + '/></md-input-container></span>';
                             break;
                     }
                 })

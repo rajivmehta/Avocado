@@ -8,7 +8,7 @@
       "firstName": "gdata",
       "validation": {
         "required": "true",
-        "maxFieldLength": "10"
+        "maxFieldLength": "7"
       }
     },
     {
@@ -24,9 +24,9 @@
     {
       "fieldName": "Birth Date",
       "isSelected": true,
-      "type": 1,
+      "type": 2,
       "model": "BDate",
-      "BDate": "new",
+      "BDate": new Date(),
       "validation": {
         "required": "true"
       }
@@ -64,6 +64,16 @@
         "minField": 20,
         "maxField": 50
       }
+    },
+    {
+        "fieldName": "Candidate E-Mail",
+        "isSelected": true,
+        "type": 5,
+        "model": "candidateemail",
+        "candidateemail": "g@gmail.com",
+        "validation": {
+            "required": "true"
+        }
     }
   ]
 };
