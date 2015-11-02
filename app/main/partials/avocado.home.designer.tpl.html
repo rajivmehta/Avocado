@@ -10,12 +10,12 @@
         </div>
     </md-toolbar>
 
-    <md-content>
+    <md-content class="app-background-color">
         <md-list>
-            <md-subheader class="md-no-sticky">Field Lists</md-subheader>
-            <md-list-item class="md-3-line" ng-repeat="item in configJson">
-                <div class="md-list-item-text" layout="column">
-                    <span style="display:inline-block">
+            <md-subheader class="md-no-sticky app-background-color">Field Lists</md-subheader>
+            <md-list-item class="md-3-line" ng-repeat="item in configJson| filter:searchField">
+                <div class="md-list-item-text">
+                    <span class="app-set-block-inline">
                         <md-checkbox ng-model="item.isSelected" aria-label="Checkbox 1"></md-checkbox>
                     </span>
                     <span>{{ item.fieldName }}</span>

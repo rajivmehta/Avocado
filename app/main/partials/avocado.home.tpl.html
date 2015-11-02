@@ -1,11 +1,11 @@
 ﻿<md-content>
-    <md-tabs md-dynamic-height md-border-bottom>
+    <md-tabs md-dynamic-height md-border-bottom class="app-tab">
         <md-tab label="Designer" md-on-select="onSelectDesigner()">
-            <md-content class="md-padding" ui-view>
+            <md-content class="md-padding app-tab-container" ui-view>
             </md-content>
         </md-tab>
         <md-tab label="Viewer" md-on-select="onSelectViewer()">
-            <md-content class="md-padding" ui-view>
+            <md-content class="md-padding app-tab-container" ui-view>
             </md-content>
         </md-tab>
     </md-tabs>

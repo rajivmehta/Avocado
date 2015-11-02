@@ -1,3 +1,19 @@
-﻿<span>
-    <span>Viewer</span>
-</span>
+﻿<div>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <span flex="5"></span>
+            <md-input-container>
+                <label class="whiteColor">
+                    <span>Viewer</span>
+                </label>
+            </md-input-container>
+            <span flex></span>
+        </div>
+    </md-toolbar>
+    <md-content class="app-background-color">
+        <form name="avocadoviewer">
+            <g-renderer config="configJsonForViewer"></g-renderer>
+            <input type="button" value="Insert" />
+        </form>
+    </md-content>
+</div>

@@ -3,6 +3,7 @@
 
 var avocado = angular.module('avocado', [
     "ui.router",
+    'avocado.viewer',
     "avocado.home.controller",
     'ngMaterial'])
     .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
